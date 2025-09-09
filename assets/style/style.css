@@ -910,10 +910,137 @@ textarea.form-control {
         padding: 20px;
     }
 }
+/* model */
+ .modal-content {
+        border-radius: var(--radius);
+        padding: 1rem;
+    }
 
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+      .bot-n-all-pop-form {
+        max-width: 420px;
+        margin: 30px auto;
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 25px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .bot-n-all-pop-form .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        background: var(--dark-bg);
+        color: var(--white);
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bot-n-all-pop-form .logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bot-n-all-pop-form h4 {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .bot-n-all-pop-form p {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .bot-n-all-pop-form .form-control {
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 12px 40px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .bot-n-all-pop-form .form-group {
+        position: relative;
+    }
+
+    .bot-n-all-pop-form .form-group i {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        color: #888;
+    }
+
+    .bot-n-all-pop-form .btn-submit {
+        background: var(--dark-bg);
+        color: var(--white);
+        border-radius: var(--radius);
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        margin-bottom: 25px;
+    }
+
+    .bot-n-all-pop-form .promise {
+        text-align: center;
+    }
+
+    .bot-n-all-pop-form .promise h6 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .bot-n-all-pop-form .promise-icons {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .bot-n-all-pop-form .promise-icons .item {
+        flex: 1;
+        padding: 0 8px;
+    }
+
+    .bot-n-all-pop-form .promise-icons img {
+        width: 45px;
+        margin-bottom: 8px;
+    }
+
+    .bot-n-all-pop-form .promise-icons p {
+        font-size: 13px;
+        margin: 0;
+        color: #333;
+        font-weight: 500;
+    }
+
+/* model */
 /* tesmonila */
 
 /* property card */
+.bot-n-propery-head{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+
+}
 .bot-n-property-card {
     display: flex;
     flex-wrap: wrap;

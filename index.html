@@ -136,15 +136,15 @@
     </section>
     <!-- end about us -->
     <!-- propery -->
-    <div class="container-fluid">
-        <h2 class="text-center mb-4">Upcoming Projects</h2>
+    <div class="container-fluid bot-n-propery-head">
+        <h2 class="text-center mb-4 mt-4">Upcoming Projects</h2>
         <!-- Filter Buttons -->
         <div class="filter-btns">
             <button class="filter-btn active" data-filter="all">New Launches</button>
             <button class="filter-btn" data-filter="residential">Residential</button>
             <button class="filter-btn" data-filter="commercial">Commercial</button>
         </div>
-        <div class="row g-4" id="property-row">
+        <div class="row g-4" id="property-row" >
             <!-- Full-width card example -->
             <div class="col-12 col-lg-12">
                 <div class="bot-n-property-card">
@@ -172,7 +172,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -322,7 +322,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -352,7 +352,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -380,7 +380,7 @@
                                 <div><span>Total Bonuses Paid:</span> ₹12 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
                     </div>
                 </div>
             </div>
@@ -431,13 +431,14 @@
 
             <p style="font-size:12px; color:#666;">100% Privacy Protected. We never share your details.</p>
             <textarea class="form-control" placeholder="Send Your Message...."></textarea>
-            <button class=" btn-submit mt-2">Submit</button>
+           
+            <a href="#thnaku" class="text-decoration-none"><button class=" btn-submit mt-2">Submit</button></a>
         </div>
     </div>
 
     <!-- contact us -->
     <!-- ===gallery section -->
-    <div class="container bot-n-new-gallery">
+    <div class="container bot-n-new-gallery" >
         <h2>Gallery</h2>
         <div class="owl-carousel owl-theme">
             <div class="item"><img src="./assets/img/galler1.png" alt="gallery"></div>
@@ -448,7 +449,70 @@
         </div>
     </div>
     <!-- ===end gallery section -->
+<!-- model form -->
+  <!-- Modal Form -->
+    <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="bot-n-all-pop-form">
+                    <!-- Close Button -->
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times"></i>
+                    </button>
 
+                    <!-- Logo -->
+                    <div class="logo">
+                        <!-- <img src="./assets/img/logo.png" alt="Salford Logo"> -->
+                          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                            <i class="fa-solid fa-house"></i> Dream House
+                        </a>
+                    </div>
+
+                    <!-- Title -->
+                    <h4>Get Priority Access & Exclusive Pricing</h4>
+                    <p>Create your account to explore exclusive property deals, track performance, and unlock smart
+                        investment tools.</p>
+
+                    <!-- Form -->
+                    <form id="offerForm">
+                        <div class="form-group">
+                            <i class="fa fa-user"></i>
+                            <input type="text" class="form-control" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-envelope"></i>
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-flag"></i>
+                            <input type="tel" class="form-control" placeholder="Enter Phone Number" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Start Tour</button>
+                    </form>
+
+                    <!-- We Promise Section -->
+                    <div class="promise">
+                        <h6>We Promise</h6>
+                        <div class="promise-icons">
+                            <div class="item">
+                                <img src="./assets/img/instant.png" alt="Call Back">
+                                <p>Instant Call Back</p>
+                            </div>
+                            <div class="item">
+                                <img src="./assets/img/price.png" alt="Price">
+                                <p>Unmatched Price</p>
+                            </div>
+                            <div class="item">
+                                <img src="./assets/img/vit.png" alt="Site Visit">
+                                <p>Free Site Visit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- model form -->
     <!-- ========other vdieo -->
     <!-- Video Section inside container -->
     <div class="container py-4">
@@ -464,7 +528,7 @@
                 <div class="bot-n-new-video-heading">
                     <h4>Ready to invest in your future home?</h4>
                     <p>We have homes in 20+ cities across the country to choose from!</p>
-                    <button class="bot-n-new-btn-submit">
+                    <button class="bot-n-new-btn-submit" data-bs-toggle="modal" data-bs-target="#offerModal">
                         Browse homes <i class="fa-solid fa-arrow-right-long"></i>
                     </button>
                 </div>
