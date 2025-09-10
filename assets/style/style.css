@@ -421,7 +421,9 @@ header {
     border-radius: 15px;
     object-fit: cover;
 }
-
+.conteact-container-bot{
+    margin-top: 6rem;
+}
 /* Responsive */
 @media (max-width: 992px) {
     .bot-n-new-about-section {
@@ -437,27 +439,63 @@ header {
     .bot-n-new-about-content p {
         font-size: 0.95rem;
     }
+    .bot-n-new-gallery{
+        margin-top: 2rem !important;
+    }
+    .conteact-container-bot{
+        margin-top: 2rem !important;
+    }
 }
 
 /* ========================= Contact ==================== */
-.video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+.form-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full height section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.form-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/hero3.jpg") no-repeat center center/cover;
+  z-index: 1;
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for text readability */
+  z-index: 2;
+}
+
+.bot-n-hero-form {
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.bot-n-hero-form h5 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c4435;
+  text-align: center;
 }
 
 .form-section {
@@ -551,6 +589,7 @@ textarea.form-control {
 .bot-n-new-gallery {
     position: relative;
     padding: 40px 0;
+    margin-top: 4rem;
 }
 
 .bot-n-new-gallery h2 {
@@ -824,7 +863,7 @@ textarea.form-control {
 /* other videow */
 /* ==============footer start */
 .bot-N-footer-realstate {
-    background: var(--white);
+    background:#d0ebf4;
     padding: 50px 0 30px;
     font-family: 'Poppins', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -850,7 +889,7 @@ textarea.form-control {
 
 .bot-N-footer-realstate .newsletter button {
     border-radius: 0 var(--radius) var(--radius) 0;
-    background: var(--primary);
+    background: var(--dark-bg);
     color: var(--white);
     border: none;
     padding: 10px 20px;
@@ -907,7 +946,7 @@ textarea.form-control {
 }
 
 .bot-N-footer-realstate .contact-box {
-    background: linear-gradient(90deg, #0b1a33, #162544);
+    background:var(--dark-bg);
     color: var(--white);
     border-radius: var(--radius);
     display: flex;
@@ -1452,6 +1491,9 @@ textarea.form-control {
     .bot-n-property-details {
         flex: 1 1 100%;
     }
+    .bot-n-new-image-wrapper{
+        margin-top: 2rem !important;
+    }
 }
 
 .filter-btns {
@@ -1483,3 +1525,73 @@ textarea.form-control {
 }
 
 /* edn property card */
+
+/* contact img */
+.bot-n-new-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 4rem;
+}
+
+.bot-n-new-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/img10.jpg") no-repeat center center/cover;
+  z-index: 1;
+}
+
+.bot-n-new-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
+  z-index: 2;
+}
+
+.bot-n-new-form-section {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+}
+
+.bot-n-new-video-heading h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bot-n-new-video-heading p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.bot-n-new-btn-submit {
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  color: #0b1a33;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bot-n-new-btn-submit:hover {
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
