@@ -1,156 +1,385 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 :root {
-    --dark-bg: #0b1a33;
-    --white: #fff;
+    --dark-bg:#004c66;
+    --white: #ffffff;
     --gray: #f8f9fa;
-    --border: #ddd;
+    --border: #e0e0e0;
     --radius: 12px;
     --primary: #004c66;
+    --secondary: #1c5f73;
     --gold: #FFD700;
     --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37);
     --price-gradient: linear-gradient(135deg, #b8860b, #DAA520);
-    --dark-overlay: rgba(0, 0, 0, 0.47);
-    --shadow-dark: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    --shadow-light: 1px 1px 6px rgba(0, 0, 0, 0.6);
     --highlight: #ffb400;
-    --bot-n-test-dark-bg: #0b1a33;
-    --bot-n-test-white: #fff;
+    --focus: #007b9e;
+    --shadow-dark: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    --shadow-light: rgba(17, 17, 26, 0.05) 0px 2px 4px,
+        rgba(17, 17, 26, 0.1) 0px 4px 12px;
+
+    /* Testimonial specific */
+    --bot-n-test-dark-bg: var(--dark-bg);
+    --bot-n-test-white: var(--white);
     --bot-n-test-border: #ddd;
-    --bot-n-test-radius: 16px;
-    --bot-n-test-primary: #004c66;
-    --bot-n-test-gold: #FFD700;
-    --bot-n-test-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --bot-n-test-radius: 12px;
+    --bot-n-test-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --bot-n-test-primary: var(--primary);
+    --bot-n-test-gold: var(--gold);
 }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: "msc-poppins-midim-font";
+    src: url("../font/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "msc-poppins-regular-font";
+    src: url("../font/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Tagesschrift';
+    src: url('../font/Tagesschrift/Tagesschrift-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "msc-heading-font";
+    src: url("../font/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "msc-poppins-regular-font", sans-serif;
 }
 
-/* --- Hero Section --- */
-.navbar-toggler {
-    background-color: #ddd !important;
+body,
+html {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    background-color: var(--gray);
+    color: var(--dark-bg);
 }
 
-/* Initial navbar style */
-.bot-n-new-nav {
-    background-color: rgba(11, 26, 51, 0.43); /* semi-transparent */
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-/* Navbar after scroll */
-.bot-n-new-nav.scrolled {
-    background-color: #000; /* solid black */
-}
-
-.navbar-brand span {
-    color: white;
-}
-
-.bot-n-new-nav-hero {
+/*================ Header ===================*/
+header {
+    width: 100%;
+    height: 111px;
+    z-index: 1000;
     position: relative;
+}
+
+.msc-agrotech-top-header {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.msc-top-header-wrapper {
+    padding: 10px 0;
+}
+
+.msc-agrotech-header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.msc-agrotech-header-top-left,
+.msc-agrotech-header-top-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.msc-agrotech-header-top-left span {
+    font-size: 12px;
+}
+
+.msc-agrotech-header-main-nav {
+    background-color: var(--white);
+    padding: 10px 0;
+    border-bottom: 2px solid var(--primary);
+    position: relative;
+}
+
+.msc-agrotech-header-logo-wrapper img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.8rem;
+}
+
+.msc-agrotech-header-navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.msc-agrotech-header-navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+}
+.msc-agrotech-header-top-right a{
+    text-decoration: none;
+    color: var(--bot-n-test-border);
+}
+.msc-agrotech-header-navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+.msc-agrotech-header-right-icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.msc-agrotech-header-navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.msc-agrotech-header-navbar ul li a:hover {
+    color: var(--highlight);
+}
+
+.msc-agrotech-header-navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.msc-agrotech-header-talk-btn {
+    background: var(--gold-gradient);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.msc-agrotech-header-talk-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.msc-mobile-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--primary);
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+/*================ Hero Section ===================*/
+.msc-agrotech-carousel {
+    position: relative;
+    width: 100%;
     height: 80vh;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+.msc-agrotech-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--white);
-    overflow: hidden;
+}
+
+.msc-agrotech-slide.active {
+    opacity: 1;
     z-index: 1;
 }
 
-.bot-n-new-nav-hero video {
+.msc-agrotech-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-blend-mode: overlay;
+    background-color: rgba(11, 26, 51, 0.8);
 }
 
-.bot-n-new-nav-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-overlay);
-    z-index: -1;
+.msc-agrotech-hero-content {
+    color: var(--white);
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 2;
 }
 
-.bot-n-new-nav-content h1 {
+.msc-agrotech-hero-title {
     font-size: 3rem;
-    font-weight: 700;
-    color: var(--white);
-    text-shadow: var(--shadow-dark);
+    font-family: "msc-heading-font", serif;
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 1rem;
 }
 
-.bot-n-new-nav-content p {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    color: var(--white);
-    text-shadow: var(--shadow-light);
+.msc-agrotech-hero-subtitle {
+    font-size: 1.25rem;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
 }
 
-/* Navbar links white */
-.navbar .nav-link {
-    color: var(--white) !important;
-}
-
-.call-box {
-    background: var(--highlight);
+.msc-agrotech-hero-btn {
+    background: var(--gold-gradient);
     color: var(--dark-bg);
-    border-radius: var(--radius);
-    padding: 0.5rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 40px;
+    box-shadow: var(--shadow-light);
+    transition: 0.3s ease;
 }
 
-.call-box-link {
-    text-decoration: none;
+.msc-agrotech-hero-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
 }
 
-.call-box i {
-    font-size: 20px;
+.msc-agrotech-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
 }
 
-/* Responsive Hero Text */
-@media (max-width: 992px) {
-    .bot-n-new-nav-content h1 {
-        font-size: 2.2rem;
+.msc-agrotech-nav.prev {
+    left: 10px;
+}
+
+.msc-agrotech-nav.next {
+    right: 10px;
+}
+
+/*================ Responsive ===================*/
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden !important;
     }
 
-    .bot-n-new-nav-content p {
-        font-size: 1rem;
+    .msc-agrotech-carousel {
+        height: 400px;
+    }
+
+    .msc-agrotech-hero-content {
+        padding: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .msc-agrotech-hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .msc-agrotech-hero-subtitle {
+        font-size: 0.8rem;
+        margin: 0 2rem !important;
+    }
+
+    .msc-agrotech-hero-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+        margin-top: 1rem !important;
+    }
+
+    .msc-agrotech-nav {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+    }
+
+    header {
+        height: 70px !important;
+        width: 100%;
+    }
+
+    .msc-top-header-wrapper,
+    .msc-agrotech-header-top-bar {
+        display: none;
+    }
+
+    .msc-mobile-toggle {
+        display: block;
+    }
+
+    .msc-agrotech-header-navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--gray);
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        z-index: 999;
+        padding: 0 10px;
+    }
+
+    .msc-agrotech-header-navbar.open {
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .msc-agrotech-header-navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .msc-agrotech-header-right-icons {
+        display: none;
     }
 }
 
-@media (max-width: 576px) {
-    .bot-n-new-nav-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .bot-n-new-nav-content p {
-        font-size: 0.9rem;
-    }
-
-    .bot-n-new-nav-hero {
-        height: 50vh !important;
-    }
-}
 
 /* --- About Section --- */
 .bot-n-new-about-section {
@@ -910,145 +1139,158 @@ textarea.form-control {
         padding: 20px;
     }
 }
+
 /* model */
- .modal-content {
-        border-radius: var(--radius);
-        padding: 1rem;
-    }
+.modal-content {
+    border-radius: var(--radius);
+    padding: 1rem;
+}
 
-    .modal-header {
-        border-bottom: none;
-    }
+.modal-header {
+    border-bottom: none;
+}
 
-    .modal-footer {
-        border-top: none;
-    }
-      .bot-n-all-pop-form {
-        max-width: 420px;
-        margin: 30px auto;
-        background: var(--white);
-        border-radius: var(--radius);
-        padding: 25px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        position: relative;
-    }
+.modal-footer {
+    border-top: none;
+}
 
-    .bot-n-all-pop-form .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: none;
-        background: var(--dark-bg);
-        color: var(--white);
-        font-size: 16px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.bot-n-all-pop-form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
 
-    .bot-n-all-pop-form .logo {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.bot-n-all-pop-form .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: var(--dark-bg);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .bot-n-all-pop-form h4 {
-        text-align: center;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
+.bot-n-all-pop-form .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .bot-n-all-pop-form p {
-        text-align: center;
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 20px;
-    }
+.bot-n-all-pop-form h4 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-    .bot-n-all-pop-form .form-control {
-        border-radius: var(--radius);
-        border: 1px solid var(--border);
-        padding: 12px 40px;
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
+.bot-n-all-pop-form p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
 
-    .bot-n-all-pop-form .form-group {
-        position: relative;
-    }
+.bot-n-all-pop-form .form-control {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 12px 40px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
 
-    .bot-n-all-pop-form .form-group i {
-        position: absolute;
-        top: 50%;
-        left: 12px;
-        transform: translateY(-50%);
-        color: #888;
-    }
+.bot-n-all-pop-form .form-group {
+    position: relative;
+}
 
-    .bot-n-all-pop-form .btn-submit {
-        background: var(--dark-bg);
-        color: var(--white);
-        border-radius: var(--radius);
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-        font-weight: 600;
-        border: none;
-        margin-bottom: 25px;
-    }
+.bot-n-all-pop-form .form-group i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+}
 
-    .bot-n-all-pop-form .promise {
-        text-align: center;
-    }
+.bot-n-all-pop-form .btn-submit {
+    background: var(--dark-bg);
+    color: var(--white);
+    border-radius: var(--radius);
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    margin-bottom: 25px;
+}
 
-    .bot-n-all-pop-form .promise h6 {
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
+.bot-n-all-pop-form .promise {
+    text-align: center;
+}
 
-    .bot-n-all-pop-form .promise-icons {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
+.bot-n-all-pop-form .promise h6 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 
-    .bot-n-all-pop-form .promise-icons .item {
-        flex: 1;
-        padding: 0 8px;
-    }
+.bot-n-all-pop-form .promise-icons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
 
-    .bot-n-all-pop-form .promise-icons img {
-        width: 45px;
-        margin-bottom: 8px;
-    }
+.bot-n-all-pop-form .promise-icons .item {
+    flex: 1;
+    padding: 0 8px;
+}
 
-    .bot-n-all-pop-form .promise-icons p {
-        font-size: 13px;
-        margin: 0;
-        color: #333;
-        font-weight: 500;
-    }
+.bot-n-all-pop-form .promise-icons img {
+    width: 45px;
+    margin-bottom: 8px;
+}
+
+.bot-n-all-pop-form .promise-icons p {
+    font-size: 13px;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
 
 /* model */
 /* tesmonila */
 
 /* property card */
-.bot-n-propery-head{
+.bot-n-propery-head {
     margin-top: 3rem;
     margin-bottom: 4rem;
 
 }
+
 .bot-n-property-card {
     display: flex;
     flex-wrap: wrap;
     background: var(--white);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-light);
     overflow: hidden;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--bot-n-test-dark-bg);
+    transition: all 0.3s ease-in-out;
+    /* smooth effect */
+}
+
+.bot-n-property-card:hover {
+    transform: translateY(-8px);
+    /* card thoda upar aayega */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* premium shadow */
+    cursor: pointer;
 }
 
 .bot-n-property-image {

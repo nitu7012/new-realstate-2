@@ -38,78 +38,101 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bot-n-new-nav fixed-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!-- Brand -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <span> <i class="fa-solid fa-house"></i> Dream House</span>
-            </a>
-
-            <!-- Toggler for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links + call button -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-house"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-tag"></i> Price</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-building"></i> Properties</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-image"></i> Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contact Us</a>
-                    </li>
-                    <!-- Call button inside menu for mobile -->
-                    <li class="nav-item d-lg-none mt-2">
-                        <a href="tel:+919878988978" class="call-box-link">
-                            <div class="call-box mb-0 justify-content-center">
-                                <i class="fa-solid fa-phone"></i>
-                                <div>
-                                    Call Us <br>
-                                    <strong>+91 9878988978</strong>
-                                </div>
-                            </div>
+    <!-- ============================ Header section ======================= -->
+    <header>
+        <!-- Top Bar -->
+        <div class="msc-agrotech-top-header">
+            <div class="container msc-top-header-wrapper">
+                <div class="msc-agrotech-header-top-bar">
+                    <div class="msc-agrotech-header-top-left">
+                        <div><i class="far fa-clock"></i> <span>Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00</span>
+                        </div>
+                        <div><i class="fas fa-phone-alt"></i> <span>+91 9809080987</span></div>
+                        <div><i class="fas fa-map-marker-alt"></i> <span>47 Bakery Street, Pune</span></div>
+                    </div>
+                    <div class="msc-agrotech-header-top-right">
+                        <a href="https://www.facebook.com/famco" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Call Button Right (desktop) -->
-            <a href="tel:+919878988978" class="call-box-link d-none d-lg-flex">
-                <div class="call-box mb-0">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        Call Us <br>
-                        <strong>+91 9878988978</strong>
+                        <a href="https://twitter.com/famco" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/famco" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/famco" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="bot-n-new-nav-hero">
-        <div class="bot-n-new-nav-overlay"></div>
-        <video autoplay muted loop>
-            <source src="./assets/img/conta-v.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="bot-n-new-nav-content">
-            <h1>Live Green, Live Luxuriously.</h1>
-            <p>Discover the Advantages of Eco-Friendly Homes with Our Real Estate Agency.</p>
+        <!-- Main Nav -->
+        <div class="msc-agrotech-header-main-nav">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap p-0">
+                <!-- Hamburger -->
+                <div class="msc-mobile-toggle">
+                    <i class="fas fa-bars" id="msc-toggle-btn"></i>
+                </div>
+                <!-- Logo -->
+                <div class="msc-agrotech-header-logo-wrapper">
+                    <img src="./assets/img/new-logo.png" alt="Logo">
+                </div>
+                <!-- Navigation Links -->
+                <nav class="msc-agrotech-header-navbar" id="msc-mobile-menu">
+                    <ul>
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="./about/about-other.html">About Us</a></li>
+                        <li><a href="./services/serves.html">Property</a></li>
+                        <li><a href="./gallery/agotechGal.html">Gallery</a></li>
+                        <li><a href="./contactus/contact.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <!-- Right Button -->
+                <div class="msc-agrotech-header-right-icons">
+                    <a href=""> <button class="msc-agrotech-header-talk-btn">Book a Visit</button>
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
+    <!--=========================== Header section end ========================== -->
+
+    <!-- ===================== Hero section ======================= -->
+    <div class="msc-agrotech-carousel">
+        <!-- Slide 1 -->
+        <div class="msc-agrotech-slide active">
+            <div class="msc-agrotech-bg"
+                style="background-image: url('./assets/img/hero1.jpg');background-position: top center;"></div>
+            <div class="msc-agrotech-hero-content">
+                <h4 class="msc-agrotech-hero-title">Find Your Dream Home with Us</h4>
+                <p class="msc-agrotech-hero-subtitle">Explore premium residential and commercial projects in prime
+                    locations.
+                    From modern apartments to luxury villas – we make owning your dream property simple, secure, and
+                    hassle-free.</p>
+                <button class="msc-agrotech-hero-btn">Book a Free Site Visit</button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="msc-agrotech-slide">
+            <div class="msc-agrotech-bg" style="background-image: url('./assets/img/hero2.jpg');"></div>
+            <div class="msc-agrotech-hero-content">
+                <h4 class="msc-agrotech-hero-title">Invest in a Better Tomorrow</h4>
+                <p class="msc-agrotech-hero-subtitle">From modern high-rises to serene gated communities, we bring you
+                    real estate opportunities
+                    that combine long-term value with unmatched quality and prime locations.</p>
+                <button class="msc-agrotech-hero-btn">Explore Projects</button>
+            </div>
+        </div>
+
+        <!-- Nav Buttons -->
+        <button class="msc-agrotech-nav prev" onclick="changeSlide(-1)" tabindex="-1">&#10094;</button>
+        <button class="msc-agrotech-nav next" onclick="changeSlide(1)" tabindex="-1">&#10095;</button>
+    </div>
+    <!-- ===================== Hero section end ======================= -->
+
 
     <!-- our about us -->
     <section class="bot-n-new-about-section">
@@ -136,7 +159,7 @@
     </section>
     <!-- end about us -->
     <!-- propery -->
-    <div class="container-fluid bot-n-propery-head">
+    <div class="container bot-n-propery-head">
         <h2 class="text-center mb-4 mt-4">Upcoming Projects</h2>
         <!-- Filter Buttons -->
         <div class="filter-btns">
@@ -144,7 +167,7 @@
             <button class="filter-btn" data-filter="residential">Residential</button>
             <button class="filter-btn" data-filter="commercial">Commercial</button>
         </div>
-        <div class="row g-4" id="property-row" >
+        <div class="row" id="property-row">
             <!-- Full-width card example -->
             <div class="col-12 col-lg-12">
                 <div class="bot-n-property-card">
@@ -172,7 +195,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -202,7 +226,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -232,7 +257,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -262,7 +288,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -292,7 +319,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -322,7 +350,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -352,7 +381,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹10.8 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -380,7 +410,8 @@
                                 <div><span>Total Bonuses Paid:</span> ₹12 Cr*</div>
                             </div>
                         </div>
-                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest Now →</button>
+                        <button class="bot-n-property-button" data-bs-toggle="modal" data-bs-target="#offerModal">Invest
+                            Now →</button>
                     </div>
                 </div>
             </div>
@@ -431,14 +462,14 @@
 
             <p style="font-size:12px; color:#666;">100% Privacy Protected. We never share your details.</p>
             <textarea class="form-control" placeholder="Send Your Message...."></textarea>
-           
+
             <a href="#thnaku" class="text-decoration-none"><button class=" btn-submit mt-2">Submit</button></a>
         </div>
     </div>
 
     <!-- contact us -->
     <!-- ===gallery section -->
-    <div class="container bot-n-new-gallery" >
+    <div class="container bot-n-new-gallery">
         <h2>Gallery</h2>
         <div class="owl-carousel owl-theme">
             <div class="item"><img src="./assets/img/galler1.png" alt="gallery"></div>
@@ -449,8 +480,8 @@
         </div>
     </div>
     <!-- ===end gallery section -->
-<!-- model form -->
-  <!-- Modal Form -->
+    <!-- model form -->
+    <!-- Modal Form -->
     <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -463,7 +494,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <!-- <img src="./assets/img/logo.png" alt="Salford Logo"> -->
-                          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
                             <i class="fa-solid fa-house"></i> Dream House
                         </a>
                     </div>
@@ -512,7 +543,7 @@
             </div>
         </div>
     </div>
- <!-- model form -->
+    <!-- model form -->
     <!-- ========other vdieo -->
     <!-- Video Section inside container -->
     <div class="container py-4">
@@ -671,7 +702,7 @@
 
 
 
-
+    <script src="./assets/scrip/script.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
@@ -776,18 +807,21 @@
     </script>
 
     // Add this script at the end of body
-<script>
-const navbar = document.querySelector('.bot-n-new-nav');
+    <script>
+        const navbar = document.querySelector('.bot-n-new-nav');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) { // scroll threshold
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-</script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // scroll threshold
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!-- hero  -->
 
+
+    <!-- hero end -->
 </body>
 
 </html>
