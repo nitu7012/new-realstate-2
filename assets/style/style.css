@@ -1360,7 +1360,7 @@ textarea.form-control {
 
 .bot-n-property-details {
     flex: 1 1 400px;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
